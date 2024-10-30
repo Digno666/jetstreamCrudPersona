@@ -75,7 +75,7 @@ class PersonaController extends Controller
         $persona->per_create  = date('Y-m-d');
         $persona->per_update  = date('Y-m-d');
         $persona->save();
-        return redirect()->route('persona.edit')->with('success', 'Registro actualizado correctamente');
+        return redirect()->route('persona.index')->with('success', 'Registro actualizado correctamente');
     }
     public function destroy(Request $request) {
         $persona = Persona::findOrFail($request->per_cod);
